@@ -13,31 +13,28 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Tanggal Kelahiran <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Tanggal Kelahiran</label>
                             <div class='col-sm-10'>
                                 <input class="date form-control" type="text" value="{{$lahir->tanggal_lahir}}" disabled>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Jam Kelahiran <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Jam Kelahiran</label>
                             <div class='col-sm-10'>
                                 <input class="date form-control" type="text" value="{{$lahir->jam_lahir}}" disabled>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Jenis Kelamin <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Jenis Kelamin</label>
                             <div class="col-sm-10">
                                 <input class="date form-control" type="text" value="{{$lahir->jenis_kelamin}}" disabled>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Berat Bayi <span class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Berat Bayi</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-sm">
                                     <input type="number" class="form-control form-control-sm" placeholder="Berat Bayi"
@@ -50,8 +47,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Panjang Bayi <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Panjang Bayi</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-sm">
                                     <input type="number" class="form-control form-control-sm" placeholder="Panjang Bayi"
@@ -64,8 +60,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Nama Lengkap Ibu <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Nama Lengkap Ibu</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control form-control-sm" placeholder="Nama Lengkap Ibu"
                                     name="nama_ibu" value="{{$lahir->nama_ibu}}" disabled>
@@ -73,8 +68,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Tanggal Lahir Ibu <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Tanggal Lahir Ibu</label>
                             <div class='col-sm-10'>
                                 <input class="date form-control" type="text" name="lahir_ibu"
                                     value="{{$lahir->lahir_ibu}}" disabled>
@@ -82,8 +76,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Usia Gestasi <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Usia Gestasi</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-sm">
                                     <input type="number" class="form-control form-control-sm" placeholder="Usia Gestasi"
@@ -96,8 +89,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Durasi Persalinan <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Durasi Persalinan</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-sm">
                                     <input type="text" class="form-control form-control-sm"
@@ -112,8 +104,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Jenis Persalinan <span
-                                    class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Jenis Persalinan</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control form-control-sm" name="jenis_persalinan"
                                     value="{{$lahir->jenis_persalinan}}" disabled>
@@ -121,7 +112,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Catatan <span class="text-danger">*</span></label>
+                            <label class="col-form-label col-sm-2">Catatan</label>
                             <div class="col-sm-10">
                                 <textarea class="form-control form-control-sm" rows="5" name="catatan"
                                     disabled>{{$lahir->catatan}}</textarea>

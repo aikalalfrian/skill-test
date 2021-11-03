@@ -126,6 +126,6 @@ class PersalinanController extends Controller
 
         $lahir->delete();
 
-        return redirect()->route('persalinan.index')->with('success','Siswa Berhasil di Hapus');
+        return redirect()->route('home')->with('success','Siswa Berhasil di Hapus');
     }
 }
