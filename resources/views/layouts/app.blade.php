@@ -44,7 +44,7 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li>
-                        <a href="{{ route('persalinan.create') }}"><i class="fa fa-plus"></i>
+                        <a href="{{ route('birth.create') }}"><i class="fa fa-plus"></i>
                             Masukan Data Kelahiran</a>
                     </li>
                     <li>

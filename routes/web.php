@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('persalinan.create');
+    return view('birth.create');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', 'PersalinanController@index')->name('home');
-Route::resource('persalinan', PersalinanController::class);
+Route::get('/home', 'BirthController@index')->name('home');
+Route::resource('birth', BirthController::class);
 
 
 

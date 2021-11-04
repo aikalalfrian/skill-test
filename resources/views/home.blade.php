@@ -23,34 +23,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($lahir as $persalinan)
+                            @foreach ($newborn as $newborns)
                             <tr class="">
-                                <td class="text-center">{{ $persalinan->tanggal_lahir }}</td>
-                                <td class="text-center">{{ $persalinan->jam_lahir }}</td>
-                                <td class="text-center">{{ $persalinan->nama_ibu }}</td>
+                                <td class="text-center">{{ $newborns->date_of_birth }}</td>
+                                <td class="text-center">{{ $newborns->birth_time }}</td>
+                                <td class="text-center">{{ $newborns->mother_name }}</td>
                                 @php
-                                $birthday = $persalinan->lahir_ibu;
+                                $birthday = $newborns->mother_birth;
                                 $age =
                                 Carbon\Carbon::parse($birthday)->diff(Carbon\Carbon::now())->format('%y
                                 Tahun, %m Bulan and %d Hari');
                                 @endphp
                                 <td class="text-center">{{ $age }}</td>
-                                <td class="text-center">{{ $persalinan->jenis_persalinan }}</td>
+                                <td class="text-center">{{ $newborns->givebirth_type }}</td>
                                 <td class="text-center">
-                                    <form action="{{ route('persalinan.destroy',$persalinan->id) }}" method="POST"
+                                    <form action="{{ route('birth.destroy', $newborns->id) }}" method="POST"
                                         class="text-center">
 
                                         <a class="btn btn-info btn-sm"
-                                            href="{{ route('persalinan.show',$persalinan->id) }}">Show</a>
+                                            href="{{ route('birth.show', $newborns->id) }}">Show</a>
 
                                         <a class="btn btn-primary btn-sm"
-                                            href="{{ route('persalinan.edit',$persalinan->id) }}">Edit</a>
+                                            href="{{ route('birth.edit', $newborns->id) }}">Edit</a>
 
                                         @csrf
                                         @method('DELETE')
 
                                         <button type="submit" class="btn btn-danger btn-sm"
-                                            onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                                            onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>
@@ -63,16 +63,6 @@
     </div>
     <!-- Page Content -->
 </div>
-
-
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="vendor/select2/select2.min.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="js/main.js"></script>
-
-
 
 <script>
     $(document).ready( function () {
