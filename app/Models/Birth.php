@@ -16,7 +16,6 @@ class Birth extends Model
 
     protected $fillable = [
         'date_of_birth',
-        'birth_time',
         'gender',
         'weight',
         'length',
@@ -27,4 +26,9 @@ class Birth extends Model
         'givebirth_type',
         'notes',
     ];
+
+    public function getDateOfBirthAttribute()
+    {
+        return Carbon::parse($this->attributes['date_of_birth'])->translatedFormat('l, d F Y h:i');
+    }
 }

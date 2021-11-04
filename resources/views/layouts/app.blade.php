@@ -69,8 +69,8 @@
 
     <script type="text/javascript">
         $('.date').datepicker({
-       format: 'dd-mm-yyyy'
-     });
+            format: 'dd-mm-yyyy'
+        });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

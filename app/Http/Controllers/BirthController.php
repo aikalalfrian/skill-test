@@ -43,7 +43,6 @@ class BirthController extends Controller
     {
         $request->validate([
             'date_of_birth' => 'required',
-            'birth_time' => 'required',
             'gender' => 'required',
             'weight' => 'required',
             'length' => 'required',
@@ -96,7 +95,6 @@ class BirthController extends Controller
     {
         $request->validate([
             'date_of_birth' => 'required',
-            'birth_time' => 'required',
             'gender' => 'required',
             'weight' => 'required',
             'length' => 'required',

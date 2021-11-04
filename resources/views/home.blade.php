@@ -13,8 +13,7 @@
                     <table id="example" class="table table-striped table-bordered" style="width:100%;">
                         <thead>
                             <tr class="row100 head">
-                                <th class="text-center">Tanggal Kelahiran</th>
-                                <th class="text-center">Jam Kelahiran</th>
+                                <th class="text-center">Tanggal dan Jam Kelahiran</th>
                                 <th class="text-center">Nama Ibu</th>
                                 <th class="text-center">Usia Ibu</th>
                                 <th class="text-center">Jenis Persalinan</th>
@@ -26,7 +25,6 @@
                             @foreach ($newborn as $newborns)
                             <tr class="">
                                 <td class="text-center">{{ $newborns->date_of_birth }}</td>
-                                <td class="text-center">{{ $newborns->birth_time }}</td>
                                 <td class="text-center">{{ $newborns->mother_name }}</td>
                                 @php
                                 $birthday = $newborns->mother_birth;

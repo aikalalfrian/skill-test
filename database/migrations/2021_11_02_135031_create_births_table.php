@@ -15,14 +15,13 @@ class CreateBirthsTable extends Migration
     {
         Schema::create('births', function (Blueprint $table) {
             $table->id();
-            $table->string('date_of_birth');
-            $table->string('birth_time');
+            $table->dateTime('date_of_birth');
             $table->string('gender');
-            $table->string('weight');
-            $table->string('length');
+            $table->integer('weight');
+            $table->integer('length');
             $table->string('mother_name');
             $table->string('mother_birth')->nullable()->default(NULL);
-            $table->string('gestational_age');
+            $table->integer('gestational_age');
             $table->string('givebirth_duration');
             $table->string('givebirth_type');
             $table->longText('notes')->nullable()->default(NULL);

@@ -14,21 +14,14 @@
                     <div class="form-group row">
                         <label class="col-form-label col-sm-2">Tanggal Kelahiran</label>
                         <div class='col-sm-10'>
-                            <input class="date form-control" type="text" value="{{$newborn->date_of_birth}}" disabled>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label class="col-form-label col-sm-2">Jam Kelahiran</label>
-                        <div class='col-sm-10'>
-                            <input class="date form-control" type="text" value="{{$newborn->birth_time}}" disabled>
+                            <input class="form-control" type="text" value="{{$newborn->date_of_birth}}" disabled>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-form-label col-sm-2">Jenis Kelamin</label>
                         <div class="col-sm-10">
-                            <input class="date form-control" type="text" value="{{$newborn->gender}}" disabled>
+                            <input class="form-control" type="text" value="{{$newborn->gender}}" disabled>
                         </div>
                     </div>
 

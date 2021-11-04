@@ -19,25 +19,9 @@
                             <label class="col-form-label col-sm-2">Tanggal Kelahiran <span
                                     class="text-danger">*</span></label>
                             <div class='col-sm-10'>
-                                <input class="date form-control" type="text" name="date_of_birth" required
-                                    oninvalid="this.setCustomValidity('Data Tanggal Kelahiran Tidak Boleh Kosong')"
+                                <input class="form-control" type="datetime-local" name="date_of_birth" required
+                                    oninvalid="this.setCustomValidity('Data Tanggal dan Jam Kelahiran Tidak Boleh Kosong')"
                                     oninput="setCustomValidity('')" value="{{$newborn->date_of_birth}}">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-form-label col-sm-2">Jam Kelahiran <span
-                                    class="text-danger">*</span></label>
-                            <div class="col-sm-10">
-                                <div class="input-group input-group-sm">
-                                    <input type="time" class="form-control form-control-sm" name="birth_time" required
-                                        oninvalid="this.setCustomValidity('Data Jam Kelahiran Tidak Boleh Kosong')"
-                                        oninput="setCustomValidity('')" value="{{$newborn->birth_time}}">
-
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">Jam dan Menit</span>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
