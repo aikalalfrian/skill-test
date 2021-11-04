@@ -20,10 +20,9 @@
                                 <label class="col-form-label col-sm-2">Tanggal Kelahiran <span
                                         class="text-danger">*</span></label>
                                 <div class='col-sm-10'>
-                                    <input class="date form-control" type="text"
-                                        placeholder="{{$newborn->date_of_birth}}" name="tanggal_lahir" required
+                                    <input class="date form-control" type="text" name="date_of_birth" required
                                         oninvalid="this.setCustomValidity('Data Tanggal Kelahiran Tidak Boleh Kosong')"
-                                        oninput="setCustomValidity('')">
+                                        oninput="setCustomValidity('')" value="{{$newborn->date_of_birth}}">
                                 </div>
                             </div>
 
@@ -32,10 +31,10 @@
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-sm">
-                                        <input type="time" class="form-control form-control-sm"
-                                            placeholder="{{$newborn->birth_time}}" name="jam_lahir" required
+                                        <input type="time" class="form-control form-control-sm" name="birth_time"
+                                            required
                                             oninvalid="this.setCustomValidity('Data Jam Kelahiran Tidak Boleh Kosong')"
-                                            oninput="setCustomValidity('')">
+                                            oninput="setCustomValidity('')" value="{{$newborn->birth_time}}">
 
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">Jam dan Menit</span>
@@ -48,11 +47,16 @@
                                 <label class="col-form-label col-sm-2">Jenis Kelamin <span
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
-                                    <select class="form-control form-control-sm" name="jenis_kelamin" required
+                                    <select class="form-control form-control-sm" name="gender" required
                                         oninvalid="this.setCustomValidity('Data Jenis Kelamin Tidak Boleh Kosong')"
                                         oninput="setCustomValidity('')">
-                                        <option value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
+                                        <option value="Laki-Laki" @if ($newborn->gender =='Laki-Laki' )
+                                            selected="selected"
+                                            @endif>
+                                            Laki-Laki</option>
+                                        <option value="Perempuan" @if ($newborn->gender =='Perempuan' )
+                                            selected="selected"
+                                            @endif>Perempuan</option>
                                     </select>
                                 </div>
                             </div>
@@ -62,10 +66,9 @@
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-sm">
-                                        <input type="number" class="form-control form-control-sm"
-                                            placeholder="{{$newborn->weight}}" name="berat" required
+                                        <input type="number" class="form-control form-control-sm" name="weight" required
                                             oninvalid="this.setCustomValidity('Data Berat Bayi Tidak Boleh Kosong')"
-                                            oninput="setCustomValidity('')">
+                                            oninput="setCustomValidity('')" value="{{$newborn->weight}}">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">KG</span>
                                         </div>
@@ -78,10 +81,9 @@
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-sm">
-                                        <input type="number" class="form-control form-control-sm"
-                                            placeholder="{{$newborn->length}}" name="panjang" required
+                                        <input type="number" class="form-control form-control-sm" name="length" required
                                             oninvalid="this.setCustomValidity('Data Panjang Bayi Tidak Boleh Kosong')"
-                                            oninput="setCustomValidity('')">
+                                            oninput="setCustomValidity('')" value="{{$newborn->length}}">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">CM</span>
                                         </div>
@@ -93,18 +95,17 @@
                                 <label class="col-form-label col-sm-2">Nama Lengkap Ibu <span
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control form-control-sm"
-                                        placeholder="{{$newborn->mother_name}}" name="nama_ibu" required
+                                    <input type="text" class="form-control form-control-sm" name="mother_name" required
                                         oninvalid="this.setCustomValidity('Data Nama Lengkap Ibu Tidak Boleh Kosong')"
-                                        oninput="setCustomValidity('')">
+                                        oninput="setCustomValidity('')" value="{{$newborn->mother_name}}">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-form-label col-sm-2">Tanggal Lahir Ibu</label>
                                 <div class='col-sm-10'>
-                                    <input class="date form-control" type="text"
-                                        placeholder="{{$newborn->mother_birth}}" name="lahir_ibu">
+                                    <input class="date form-control" type="text" value="{{$newborn->mother_birth}}"
+                                        name="mother_birth">
                                 </div>
                             </div>
 
@@ -113,10 +114,10 @@
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-sm">
-                                        <input type="number" class="form-control form-control-sm"
-                                            placeholder="{{$newborn->gestational_age}}" name="usia_gestasi" required
+                                        <input type="number" class="form-control form-control-sm" name="gestational_age"
+                                            required
                                             oninvalid="this.setCustomValidity('Data Usia Gestasi Tidak Boleh Kosong')"
-                                            oninput="setCustomValidity('')">
+                                            oninput="setCustomValidity('')" value="{{$newborn->gestational_age}}">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">Minggu</span>
                                         </div>
@@ -130,10 +131,9 @@
                                 <div class="col-sm-10">
                                     <div class="input-group input-group-sm">
                                         <input type="time" class="form-control form-control-sm"
-                                            placeholder="Durasi Persalinan. Contoh: 1:30" name="lama_persalinan"
-                                            required
+                                            name="givebirth_duration" required
                                             oninvalid="this.setCustomValidity('Data Durasi Persalinan Tidak Boleh Kosong')"
-                                            oninput="setCustomValidity('')">
+                                            oninput="setCustomValidity('')" value="{{$newborn->givebirth_duration}}">
 
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">Jam dan Menit</span>
@@ -146,13 +146,23 @@
                                 <label class="col-form-label col-sm-2">Jenis Persalinan <span
                                         class="text-danger">*</span></label>
                                 <div class="col-sm-10">
-                                    <select class="form-control form-control-sm" name="jenis_persalinan" required
+                                    <select class="form-control form-control-sm" name="givebirth_type" required
                                         oninvalid="this.setCustomValidity('Data Jenis Persalinan Tidak Boleh Kosong')"
                                         oninput="setCustomValidity('')">
-                                        <option value="Normal">Normal</option>
-                                        <option value="Dibantu Alat">Dibantu Alat</option>
-                                        <option value="Caesar">Caesar</option>
-                                        <option value="Waterbirth">Waterbirth</option>
+                                        <option value="Normal" @if ($newborn->givebirth_type =='Normal' )
+                                            selected="selected"
+                                            @endif>
+                                            Normal</option>
+                                        <option value="Dibantu Alat" @if ($newborn->givebirth_type =='Dibantu Alat' )
+                                            selected="selected"
+                                            @endif>Dibantu Alat</option>
+
+                                        <option value="Caesar" @if ($newborn->givebirth_type =='Caesar' )
+                                            selected="selected"
+                                            @endif>Caesar</option>
+                                        <option value="Waterbirth" @if ($newborn->givebirth_type =='Waterbirth' )
+                                            selected="selected"
+                                            @endif>Waterbirth</option>
                                     </select>
                                 </div>
                             </div>
@@ -160,8 +170,8 @@
                             <div class="form-group row">
                                 <label class="col-form-label col-sm-2">Catatan</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control form-control-sm" rows="5"
-                                        placeholder="{{$newborn->notes}}" name="catatan"></textarea>
+                                    <textarea class="form-control form-control-sm" rows="5" value="{{$newborn->notes}}"
+                                        name="notes">{{$newborn->notes}}</textarea>
                                 </div>
                             </div>
 
