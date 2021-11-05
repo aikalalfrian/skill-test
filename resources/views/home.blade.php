@@ -23,16 +23,14 @@
                         </thead>
                         <tbody>
                             @foreach ($newborn as $newborns)
-                            <tr class="">
+                            <tr>
                                 <td class="text-center">{{ $newborns->date_of_birth }}</td>
                                 <td class="text-center">{{ $newborns->mother_name }}</td>
-                                @php
-                                $birthday = $newborns->mother_birth;
-                                $age =
-                                Carbon\Carbon::parse($birthday)->diff(Carbon\Carbon::now())->format('%y
-                                Tahun, %m Bulan and %d Hari');
-                                @endphp
-                                <td class="text-center">{{ $age }}</td>
+                                @if ($newborns->age > 0)
+                                <td class="text-center">{{ $newborns->age }} Tahun</td>
+                                @else
+                                <td class="text-center">Data Tidak Ada</td>
+                                @endif
                                 <td class="text-center">{{ $newborns->givebirth_type }}</td>
                                 <td class="text-center">
                                     <form action="{{ route('birth.destroy', $newborns->id) }}" method="POST"

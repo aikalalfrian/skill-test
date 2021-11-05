@@ -31,4 +31,16 @@ class Birth extends Model
     {
         return Carbon::parse($this->attributes['date_of_birth'])->translatedFormat('l, d F Y h:i');
     }
+
+
+    public function getAgeAttribute()
+        {
+            if (!is_null($this->attributes['created_at']))
+            {
+                $realAge = Carbon::parse($this->attributes['created_at'])->diff(Carbon::parse($this->attributes['mother_birth']))->format('%y');
+                return $realAge;
+            }
+
+            return Carbon::parse($this->attributes['mother_birth'])->age;
+        }
 }
